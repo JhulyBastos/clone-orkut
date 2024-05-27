@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "brand-color": "#ED2590",
+        "dark-10": "#4B4B4B",
+        "dark-20": "#B4AEAE",
+        "dark-30": "#FDFEFF",
+        "dark-40": "#FFFFFF",
+        "dark-50": "#D9E6F7",
+        "dark-60": "#EFF3F8",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-pattern": "url('/img/signup-image.png')",
       },
     },
   },
