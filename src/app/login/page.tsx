@@ -8,7 +8,7 @@ export default function LoginPage() {
   return (
     <div className="flex flex-col h-screen w-full">
       {/* parte de cima */}
-      <header className="flex justify-between items-center px-48 py-6">
+      <header className="flex justify-between items-center px-48 py-6  bg-dark-40">
         <Image src={Logo} alt="logo do orkut" width={100} height={50} />
         <nav>
           <ol className="flex justify-center items-center gap-5">
@@ -62,7 +62,7 @@ export default function LoginPage() {
       </section>
 
       {/* parte de baixo */}
-      <footer className="flex justify-center items-center py-3">
+      <footer className="flex justify-center items-center py-3  bg-dark-40">
         <p className="text-brand-color">Todos os direitos reservados</p>
       </footer>
     </div>
