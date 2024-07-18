@@ -10,3 +10,12 @@ export function Input({ ...props }: InputProps) {
     />
   );
 }
+
+export function InputProfile({ ...props }: InputProps) {
+  return (
+    <input
+      {...props}
+      className="bg-dark-60 w-3/4 h-12 p-4 rounded-lg outline-none"
+    />
+  );
+}

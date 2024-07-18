@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  bg-dark-50`}>{children}</body>
+      <body className={`${inter.className}  bg-dark-50 w-full h-screen`}>
+        {children}
+      </body>
     </html>
   );
 }
