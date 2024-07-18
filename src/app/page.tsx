@@ -6,8 +6,10 @@ import Logo from "../../public/img/logo.png";
 import { useState } from "react";
 import { InputProfile } from "@/components/Input";
 import { Button } from "@/components/Button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
   function openProfileModal() {
@@ -107,7 +109,10 @@ export default function Home() {
               </form>
               <div className="flex justify-start mt-16 gap-4">
                 <Button>Salvar</Button>
-                <Button variant="outline"> Cancelar</Button>
+                <Button variant="outline" onClick={closeProfileModal}>
+                  {" "}
+                  Cancelar
+                </Button>
               </div>
             </div>
           </div>
