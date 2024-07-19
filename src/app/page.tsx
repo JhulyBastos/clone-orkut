@@ -7,6 +7,10 @@ import { useState } from "react";
 import { InputProfile } from "@/components/Input";
 import { Button } from "@/components/Button";
 import { useRouter } from "next/navigation";
+import { usuarios } from "@/data/usuarios";
+import { useForm } from "react-hook-form";
+import { Usuario } from "@/types/usuario";
+import ProfileForm from "@/components/Forms/ProfileForm";
 
 export default function Home() {
   const router = useRouter();
@@ -19,6 +23,7 @@ export default function Home() {
   function closeProfileModal() {
     setIsProfileModalOpen(false);
   }
+
   return (
     <div className="w-full h-screen flex flex-col items-center">
       {/* parte de cima */}
@@ -70,53 +75,7 @@ export default function Home() {
         </div>
       </section>
       {isProfileModalOpen && (
-        <div className="w-full h-screen fixed inset-0 bg-black/60 flex justify-center py-5 px-10 ">
-          <div className="w-full h-full rounded-xl py-5 px-6 bg-dark-40 overflow-auto">
-            <h1 className="text-brand-color text-lg mb-4">Editar meu perfil</h1>
-            <div>
-              <form className="flex flex-col gap-3" action="">
-                <p className="text-black/90 text-lg">Sobre você:</p>
-                <InputProfile placeholder="Digite aqui" />
-                <p className="text-black/90 text-lg">Relacionamento:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Aniversário:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Idade:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Filhos:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Sexo:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">profissão:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Estado:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Cidade:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Música:</p>
-                <InputProfile placeholder="Digite aqui" />
-
-                <p className="text-black/90 text-lg">Filmes:</p>
-                <InputProfile placeholder="Digite aqui" />
-              </form>
-              <div className="flex justify-start mt-16 gap-4">
-                <Button>Salvar</Button>
-                <Button variant="outline" onClick={closeProfileModal}>
-                  {" "}
-                  Cancelar
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ProfileForm closeProfileModal={closeProfileModal} />
       )}
     </div>
   );

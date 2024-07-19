@@ -2,10 +2,16 @@ import { Usuario } from "@/types/usuario";
 
 export const usuarios: Usuario[] = [
   {
-    id: 1,
-    nota: 3.8,
-    numeroAvaliacoes: 82,
-    imagem: "/assets/imagens/Avatar.jpg",
-    filme: "Avatar",
+    bio: "",
+    relacionamento: "",
+    aniversario: 0,
+    idade: 0,
+    filhos: 0,
+    sexo: "",
+    profissao: "",
+    Estado: "",
+    Cidade: "",
+    Musica: "",
+    Filmes: "",
   },
 ];
