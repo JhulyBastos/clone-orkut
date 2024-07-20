@@ -2,6 +2,7 @@ import { Usuario } from "@/types/usuario";
 
 export const usuarios: Usuario[] = [
   {
+    nome: "",
     bio: "",
     relacionamento: "",
     aniversario: 0,

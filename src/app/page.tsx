@@ -1,5 +1,5 @@
 "use client";
-import { Search } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 
 import Image from "next/image";
 import Logo from "../../public/img/logo.png";
@@ -11,6 +11,7 @@ import { usuarios } from "@/data/usuarios";
 import { useForm } from "react-hook-form";
 import { Usuario } from "@/types/usuario";
 import ProfileForm from "@/components/Forms/ProfileForm";
+import { SearchInput } from "@/components/SearchInput";
 
 export default function Home() {
   const router = useRouter();
@@ -30,13 +31,34 @@ export default function Home() {
       <header className=" w-full flex justify-between items-center px-40 py-6 bg-dark-40">
         <Image src={Logo} alt="logo do orkut" width={100} height={50} />
         <nav>
-          <ol className="flex justify-center items-center gap-5">
-            <li className="text-dark-10">Início</li>
-            <li className="text-dark-10">Perfil</li>
-            <li className="text-dark-10">Comunidades</li>
-            <li className="text-dark-10">Jogos</li>
-          </ol>
+          <form className="flex justify-center items-center gap-5">
+            <button className="text-dark-10 hover:text-brand-color">
+              Início
+            </button>
+            <button className="text-dark-10  hover:text-brand-color">
+              Perfil
+            </button>
+            <button className="text-dark-10  hover:text-brand-color">
+              Comunidades
+            </button>
+            <button className="text-dark-10  hover:text-brand-color">
+              Jogos
+            </button>
+          </form>
         </nav>
+        <div>
+          <SearchInput />
+        </div>
+        <div className="flex items-center gap-4">
+          {" "}
+          <img
+            className=" w-[40px] h-[40px] rounded-full "
+            src="/img/perfil.jpg"
+            alt="imagem de perfil"
+          />
+          <h1>Jhuly Bastos</h1>
+          <ChevronDown color="#ED2590" />
+        </div>
       </header>
       <section className="bg-dark-50 w-full h-full">
         <div className="flex justify-between gap-8 px-40 py-20">
@@ -62,14 +84,15 @@ export default function Home() {
             </div>
           </div>
           <div className=" bg-dark-40 w-full h-screen rounded-2xl">
-            dsadsdad
+            {" "}
+            biografia{" "}
           </div>
           <div className="flex flex-col gap-7">
             <div className=" bg-dark-40 w-full h-[399px] rounded-2xl">
-              dsadsadsad
+              Amigos (248)
             </div>
             <div className=" bg-dark-40 w-full h-[399px] rounded-2xl">
-              dsdsadsa
+              Comunidades (42)
             </div>
           </div>
         </div>

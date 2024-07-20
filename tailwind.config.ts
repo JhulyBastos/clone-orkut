@@ -16,6 +16,7 @@ const config: Config = {
         "dark-40": "#FFFFFF",
         "dark-50": "#D9E6F7",
         "dark-60": "#EFF3F8",
+        "dark-70": "#EFF3F8",
       },
       backgroundImage: {
         "hero-pattern": "url('/img/signup-image.png')",

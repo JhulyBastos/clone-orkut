@@ -9,6 +9,7 @@ interface ProfileFormProps {
 export default function ProfileForm({ closeProfileModal }: ProfileFormProps) {
   const metodos = useForm({
     defaultValues: {
+      nome: "",
       bio: "",
       relacionamento: "",
       aniversario: 0,
@@ -37,6 +38,11 @@ export default function ProfileForm({ closeProfileModal }: ProfileFormProps) {
             className="flex flex-col gap-3"
             action=""
           >
+            <p className="text-black/90 text-lg">Nome:</p>
+            <InputProfile
+              {...metodos.register("nome")}
+              placeholder="Digite aqui"
+            />
             <p className="text-black/90 text-lg">Sobre você:</p>
             <InputProfile
               {...metodos.register("bio")}

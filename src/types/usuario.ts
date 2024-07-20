@@ -1,4 +1,5 @@
 export type Usuario = {
+  nome: string;
   bio: string;
   relacionamento: string;
   aniversario: number;
