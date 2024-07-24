@@ -12,6 +12,9 @@ import { useForm } from "react-hook-form";
 import { Usuario } from "@/types/usuario";
 import ProfileForm from "@/components/Forms/ProfileForm";
 import { SearchInput } from "@/components/SearchInput";
+import { CardBiografia } from "@/components/Biografia";
+import CardFriends from "@/components/Friends";
+import CardCommunity from "@/components/Community";
 
 export default function Home() {
   const router = useRouter();
@@ -83,16 +86,15 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className=" bg-dark-40 w-full h-screen rounded-2xl">
-            {" "}
-            biografia{" "}
+          <div>
+            <CardBiografia />
           </div>
           <div className="flex flex-col gap-7">
-            <div className=" bg-dark-40 w-full h-[399px] rounded-2xl">
-              Amigos (248)
+            <div>
+              <CardFriends />
             </div>
-            <div className=" bg-dark-40 w-full h-[399px] rounded-2xl">
-              Comunidades (42)
+            <div>
+              <CardCommunity />
             </div>
           </div>
         </div>
