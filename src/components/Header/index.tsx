@@ -63,12 +63,12 @@ export default function Header() {
                 </NavigationMenu.Trigger>
                 <NavigationMenu.Content className=" xl:w-auto xl:h-auto bg-white drop-shadow-md  mt-4  text-black  items-center rounded-xl w-[167px] h-11 absolute top-[80%]">
                   <ul className="flex flex-col text-dark-10  gap-1 py-2 mr-14 ml-4">
-                    <button onClick={openProfileModal}>
+                    <button onClick={() => router.push("/")}>
                       <li className="flex items-center gap-1  hover:text-brand-color">
                         Perfil <User className="size-4" />
                       </li>
                     </button>
-                    <button>
+                    <button onClick={() => router.push("/settings")}>
                       <li className="flex items-center gap-1  hover:text-brand-color">
                         Configuração
                         <Cog className="size-[18px]" />
